@@ -1,0 +1,19 @@
+Distributed Tracing:
+1. Create Payment2 Service which calls the Payment Service
+2. Add Spring Cloud Zipkin client and Spring Cloud Slueth depedency in both the service
+3. Start both the service 
+4. sleuth will enable the traceid and spanid
+5. Zipkin client helps to retrieve the data in Zipkin server
+6. Go to Zipkin page and retrieve the Zipkin jar file
+7. Execute the jar in cmd prompt with java -jar "path"
+8. Hit localhost:9411 for Zipkin Server
+9. log statement
+      INFO [spring application name,Trace Id,Span Id] 
+10. When we have multiple microservices, we call one microservice from another microservice
+    Spring Application Name will be Microservice name
+    Trace ID will be same along the flow
+    Span Id will be unique for the services
+
+    Trace Id & Span Id will be some AplhaNumeric number
+
+11. Using Zipkin dashboard, we can view the flow using Service name or Trace Id's
